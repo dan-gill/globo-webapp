@@ -1,8 +1,8 @@
 
 variable "region" {
   type        = string
-  description = "(Optional) AWS Region to deploy in. Defaults to us-east-1."
-  default     = "us-east-1"
+  description = "(Optional) AWS Region to deploy in. Defaults to us-west-2."
+  default     = "us-west-2"
 }
 
 variable "prefix" {
@@ -46,5 +46,3 @@ variable "vpc_id" {
   type        = string
   description = "(Required) VPC ID of VPC for application deployment."
 }
-
-
