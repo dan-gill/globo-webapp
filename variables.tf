@@ -22,19 +22,20 @@ variable "billing_code" {
 
 # Application variables
 
-variable "ip_range" {
-  default = "0.0.0.0/0"
-}
-
 variable "instance_type" {
   type        = string
   description = "(Optional) EC2 Instance type to use for web app. Defaults to t3.micro."
   default     = "t3.micro"
 }
 
-variable "api_key" {
+variable "api_key_secret_id" {
   type        = string
-  description = "(Required) API key for web app to talk to SaaS platform."
+  description = "(Required) Secret ID for the API key for web app to talk to SaaS platform."
+}
+
+variable "ec2_role_name" {
+  type        = string
+  description = "(Required) Role Name for EC2 instance profile"
 }
 
 variable "playbook_repository" {
