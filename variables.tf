@@ -22,10 +22,6 @@ variable "billing_code" {
 
 # Application variables
 
-variable "ip_range" {
-  default = "0.0.0.0/0"
-}
-
 variable "instance_type" {
   type        = string
   description = "(Optional) EC2 Instance type to use for web app. Defaults to t3.micro."
