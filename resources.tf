@@ -30,6 +30,8 @@ resource "aws_iam_instance_profile" "main" {
   name = "${local.name_prefix}-webapp"
   role = var.ec2_role_name
 
+  depends_on = [ aws_iam_role_policy_attachment.ssm_access ]
+
   tags = local.common_tags
 }
 resource "aws_instance" "main" {
